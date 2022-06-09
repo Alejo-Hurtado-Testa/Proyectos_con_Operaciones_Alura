@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<h1>PROGRAMA CALCULAR PUNTOS DE UN EQUIPO DE FUCHIBOL</h1>
+
+<script>
+
+	function saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(algo) {
+		document.write(algo);
+		saltarlinea();
+	}
+
+	var victorias = parseInt(prompt("Cuantas victorias tuvo tu equipo:"));
+	var empates = parseInt(prompt("Cuantos empates tuvo tu equipo:"));
+
+	var puntos_totales = (victorias * 3) + empates;
+
+	imprimir("El total de puntos es de: " + puntos_totales);
+
+	if (puntos_totales > 30) {
+		imprimir("El equipo esta mejor que la temporada pasada");
+	} else if (puntos_totales < 30) {
+		imprimir("El equipo esta peor que la temporada pasada");
+	} else {
+		imprimir("El equipo esta igual que la temporada pasada");
+	}
+
+</script>

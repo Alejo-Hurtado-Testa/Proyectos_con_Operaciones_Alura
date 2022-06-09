@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<h1>PROGRAMA CALCULAR NUMEROS PARES DEL 1 AL 100</h1>
+
+
+
+<script>
+
+	function saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(algo) {
+		document.write(algo);
+		saltarlinea();
+	}
+
+	var numero_limite = 100;
+	var cont = 2;
+
+	while (cont <= numero_limite) {
+
+		var num = Math.round(Math.random() * 100);
+		if (num % 2 == 0) {
+			imprimir(num);
+		}
+		cont = cont + 2;
+
+	}
+
+	imprimir("FIN DEL PROGRAMA");
+
+</script>

@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<h1>JUEGO DE ADIVINANZA</h1>
+
+
+
+<script>
+
+	function saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(algo) {
+		document.write(algo);
+		saltarlinea();
+	}
+
+	// PARA QUE LA COMPUTADORA GENERE UN NUMERO POR SI SOLA PODEMOS UTILIZAR EL METODO Math.random().
+	// PARA QUE SEA ENTRE 0 Y 10, SOLO TENEMOS QUE PONER UNA MULTIPLICACION AL ULTIMO.
+	// PARA QUE SE REDONDEE SIN NUMEROS DECIMALES BASTA CON UTILIZAR LA FUNCION Math.round(). 
+	var numero_pensado = Math.round(Math.random() * 10);
+	
+	var intentos = 3;
+	var contador = 1;
+
+	while (contador <= intentos) {
+
+		var numero_pedido = parseInt(prompt("Ingrese un numero entre 0 y 10 para adivinar"));
+
+		if (numero_pedido == numero_pensado) {
+			alert("Adivinaste el numero en el intento " + contador + " el numero pensado era: " + numero_pensado);
+			break;
+		} else {
+			alert("No adivinaste el numero");
+		}
+		contador++;
+	}
+
+	if (numero_pedido == numero_pensado) {
+			imprimir("Adivinaste el numero en el intento " + contador + " el numero pensado era: " + numero_pensado); 
+		} else {
+			imprimir("No adivinaste el numero, el numero pensado era: " + numero_pensado);
+		}
+	imprimir("FIN DEL PROGRAMA");
+
+</script>

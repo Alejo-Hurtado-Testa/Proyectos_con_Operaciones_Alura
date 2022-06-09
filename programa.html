@@ -1,0 +1,69 @@
+<meta charset="utf-8">
+
+
+HTML
+<br>
+para poder escribir dentro del documento script, debemos usar la instruccion "document"
+
+<br>
+
+se pueden hacer saltos de lineas dentro del codigo de JS o en el HTML
+
+<br>
+<br>
+JS
+<br>
+<script>
+
+	function saltarlinea() {
+		document.write("<br>");
+	}
+
+	function imprimir(algo) {
+		document.write(algo);
+		saltarlinea();
+	}
+
+
+	var anio = 2022;
+	var saltolinea = "<br>";
+
+	imprimir("hola puto");
+
+	// ALERT ES PARA LANZAR UN MENSAJE CUANDO SE ENTRA A LA PAGINA
+	// alert("La edad de Alejo es...")
+	// alert("?")
+
+	/*
+	document.write("Alejo nacio en el...");
+	document.write(saltolinea);
+	document.write(2022 - 20);
+	*/
+
+
+	document.write(saltolinea);
+	imprimir("Alejo tiene: " + (anio - 2002) + " años.");
+	document.write(saltolinea);
+	saltarlinea();
+
+	imprimir("Albertino tiene: " + (anio - 2012) + " años.");
+	document.write(saltolinea);
+	saltarlinea();
+
+	imprimir("Agustino tiene: " + (anio - 2017) + " años.");
+	document.write(saltolinea);
+	saltarlinea();
+
+	/*
+
+	var edad_alejo = 20;
+	var edad_albertino = 10; 
+	var edad_agustino = 5;
+
+	promedio = (edad_alejo + edad_albertino + edad_agustino)/3;
+
+	//para redondear un numero con decimales debemos usar el metodo "Math.round()".
+	document.write("El promedio de nuestras edades es de: "+ Math.round(promedio));
+
+	*/
+</script>

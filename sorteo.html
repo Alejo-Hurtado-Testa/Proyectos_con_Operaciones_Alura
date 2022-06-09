@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sorteo(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var num_pensado = sorteo(20);
+    var num_pedido = parseInt(prompt("Ingrese un numero para adivinar"))
+
+    if (num_pensado == num_pedido) {
+        imprimir("Usted acerto el numero");
+    } else if (num_pensado > num_pedido) {
+        imprimir("Usted erro de numero. El numero del sorteo era menor al ingresado");
+    } else {
+        imprimir("Usted erro de numero. El numero del sorteo era mayor al ingresado");
+    }
+
+</script>
